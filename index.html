@@ -2,14 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/base.css">
-    <script src="js/jquery.js"></script>
+    <title>Cats</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"
+            integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+            crossorigin="anonymous">
+    </script>
     <script src="js/jquery.jcarousel.js"></script>
-    <script src="js/jquery.searchabledropdown-1.0.8.src.js"></script>
-
+    <script src="js/checkbox.js"></script>
+    <script src="js/fancySelect.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fancySelect.css">
+    <link rel="stylesheet" href="css/checkbox-style.css">
 </head>
+
 <body>
 <div class="wrapper">
 
@@ -51,7 +58,7 @@
                 <li><img src="img/cat%20(3).jpg" width="400" height="400" alt=""></li>
                 <li><img src="img/cat%20(4).jpg" width="400" height="400" alt=""></li>
                 <li><img src="img/cat%20(5).jpg" width="400" height="400" alt=""></li>
-             </ul>
+            </ul>
         </div>
 
         <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
@@ -61,27 +68,67 @@
 
         </p>
     </div>
-    <div class="breed-select">
-      <form>
-          <select size="7" name="selectBreed">
-              <option selected="selected">Choose your cat breed</option>
-              <option>Abyssian</option>
-              <option>American Bobtail</option>
-              <option>American Curl</option>
-              <option>American Shorthair</option>
-              <option>American Wirehair</option>
-              <option>Balinese</option>
-              <option>Bengal</option>
-              <option>Birman</option>
-              <option>Bombay</option>
-              <option>British Shorthair</option>
-              <option>Burmese</option>
-              <option>Cornish Rex</option>
-              <option>Other...</option>
-        </select>
-    </form>
+    <div class="customization">
+		<div class="breed-select">
+			<form>
+				<select class="basic">
+					<option value="">Choose your cat breed</option>
+					<option>Abyssian</option>
+					<option>American Bobtail</option>
+					<option>American Curl</option>
+					<option>American Shorthair</option>
+					<option>American Wirehair</option>
+					<option>Balinese</option>
+					<option>Bengal</option>
+					<option>Birman</option>
+					<option>Bombay</option>
+					<option>British Shorthair</option>
+					<option>Burmese</option>
+					<option>Cornish Rex</option>
+					<option>Other..</option>
+				</select>
+			</form>
+		</div>
+		<div class="chkboxes">
+			<div class="jquerychkbox">
+				<h3>Cats (JS)</h3>
+				<form action="#">
+					<ul>
+						<li>
+							<label for="ch11">Вам нравятся кошки</label>
+							<input class="icheckbox" type="checkbox" name="" id="ch11" value="on" tabindex="1">
+						</li>
+						<li>
+							<label for="ch12">Вы любите кошек</label>
+							<input class="icheckbox" type="checkbox" name="" id="ch12" checked="true" value="2" tabindex="2">
+						</li>
+						<li>
+							<label for="ch13">Вы обожаете кошек</label>
+							<input class="icheckbox" type="checkbox" name="" id="ch13" checked="true" value="on" tabindex="0" disabled="">
+						</li>
+					</ul>
+				</form>
+				
+				<h3>Dogs (CSS)</h3>
+				<form action="#">
+					<ul class="css-check-list">
+						<li>
+							<input type="checkbox" id="ch21" value="on" tabindex="1">
+							<label for="ch21">Вам нравятся собаки</label>
+						</li>
+						<li>
+							<input type="checkbox" id="ch22" checked="true" value="2" tabindex="2">
+							<label for="ch22">Вы любите собак</label>
+						</li>
+						<li>
+							<input type="checkbox" id="ch23" checked="true" value="on" tabindex="0" disabled="">
+							<label for="ch23">Вы обожаете собак</label>
+						</li>
+					</ul>
+				</form>
+			</div>
+		</div>
   </div>
 </div>
-    <script src="js/main.js"></script>
 </body>
 </html>

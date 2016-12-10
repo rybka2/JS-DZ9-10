@@ -1,3 +1,7 @@
+/**
+ * Created by rtur on 18.10.2016.
+ */
+//nav
  $(document).ready(function() {
      $( '.dropdown' ).hover(
          function(){
@@ -43,10 +47,33 @@
                 $(this).removeClass('active');
             })
             .jcarouselPagination();
-    });
-})(jQuery);
 
-//select
-$(document).ready(function() {
-    $("select").searchable();
-});
+
+        $('.basic').fancySelect();
+
+        $('.icheckbox').iCheck({
+          checkboxClass: 'icheckbox_square-green',
+          radioClass: 'iradio_square-green',
+          increaseArea: '20%' // optional
+        });
+      });
+
+        var $link = $('.menu li');
+
+        $link.hover(function(e) {
+          var $submenu = $(this).children('ul');
+          $submenu.slideDown(200);
+          $submenu.animate({
+            backgroundColor: '#333',
+            width: '180px'
+          }, 250);
+        }, function(e) {
+          var $submenu = $(this).children('ul');
+          $submenu.slideUp(200);
+          $submenu.animate({
+            backgroundColor: '#c83232',
+            width: '150px'
+          }, 1);
+    })
+
+})(jQuery);

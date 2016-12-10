@@ -208,13 +208,71 @@ h1, p {
 .breed-select {
 	margin: 20px auto;
 	width: 300px;
+	display: inline-block;
 }
 
 form {
-    width: 200px;
+    width: 230px;
     margin: 0 auto;
 }
 
-select {
+.customization {
+	width: 700px;
+	margin: 0 auto;
+}
 
+.chkboxes {
+	display: inline-block;
+	margin-left: 169px;
+}
+
+.css-check-list {
+	list-style: none;
+}
+
+.css-check-list li {
+	height: 25px;
+}
+
+.jquerychkbox ul {
+    list-style: none;
+}
+
+.jquerychkbox li {
+    width: 190px;
+}
+
+.css-check-list label {
+    width: 105px;
+}
+
+.css-check-list [type=checkbox] {
+    display: none;
+}
+
+.css-check-list input + label:after {
+    display: inline-block;
+    position: relative;
+    bottom: 1px;
+    width: 22px;
+    height: 22px;
+    float: right;
+    background: url('../img/sprite.png');
+    content: '';
+}
+
+.css-check-list [type=checkbox] + label:hover:after {
+    background-position: -24px 0;
+}
+
+.css-check-list [type=checkbox]:checked + label:after {
+    background-position: -48px 0;
+}
+
+.css-check-list [type=checkbox]:disabled + label:after {
+    background-position: -72px 0;
+}
+
+.css-check-list [type=checkbox]:checked:disabled + label:after {
+    background-position: -96px 0;
 }
